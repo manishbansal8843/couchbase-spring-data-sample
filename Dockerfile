@@ -6,7 +6,7 @@ LABEL description="sample"
 RUN ["mkdir", "-p", "/opt/app"]
 WORKDIR /opt/app
 
-COPY ["couchbase-spring-data-sample/target/sample*.jar", "sample.jar"]
+COPY ["target/sample*.jar", "sample.jar"]
 
 EXPOSE 8080
 
