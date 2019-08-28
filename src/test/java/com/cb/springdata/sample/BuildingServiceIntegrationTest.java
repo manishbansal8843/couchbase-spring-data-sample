@@ -4,6 +4,8 @@ import com.cb.springdata.sample.entities.Area;
 import com.cb.springdata.sample.entities.Building;
 import com.cb.springdata.sample.service.BuildingService;
 import lombok.val;
+
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,7 +17,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-
+@Ignore
 public class BuildingServiceIntegrationTest extends SampleApplicationTests {
 
     public static final String BUILDING_1 = "building::1";
