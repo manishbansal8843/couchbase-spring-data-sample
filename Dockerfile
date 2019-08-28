@@ -1,4 +1,4 @@
-FROM FROM gcr.io/google-appengine/openjdk
+FROM gcr.io/google-appengine/openjdk
 RUN apk add --update --no-cache netcat-openbsd
 RUN apk add --no-cache curl
 
