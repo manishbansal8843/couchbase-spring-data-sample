@@ -2,7 +2,9 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--network=cloudbuild','--tag=gcr.io/couchbase-hackathon/couchbase-spring-data-sample', '.']
+  args: ['build','--tag=gcr.io/couchbase-hackathon/couchbase-spring-data-sample', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/couchbase-hackathon/couchbase-spring-data-sample']
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply','-f','deploy.yaml']
 images: ['gcr.io/couchbase-hackathon/couchbase-spring-data-sample']
