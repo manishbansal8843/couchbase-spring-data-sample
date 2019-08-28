@@ -2,10 +2,10 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/couchbase-spring-data-sample', '.']
+  args: ['build', '--tag=gcr.io/couchbase-hackathon/couchbase-spring-data-sample', '.']
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply','-f','deploy.yaml']
-images: ['gcr.io/$PROJECT_ID/couchbase-spring-data-sample']
+images: ['gcr.io/couchbase-hackathon/couchbase-spring-data-sample']
 options:
   env: 
   - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
