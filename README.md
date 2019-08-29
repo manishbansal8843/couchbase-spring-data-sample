@@ -43,6 +43,10 @@ This will install this application in GKE cluster along with couchbase cluster.
 
 1. This application can be tested by deploying a busybox-curl container on the same cluster and then executing cUrl commands.
 
+```
+ kubectl run curl-sample --image=radial/busyboxplus:curl -i --tty 
+```
+
 2. To create a `building` resource.
 
 Sample request
